@@ -1,0 +1,93 @@
+@import "./reset.css";
+
+:root{
+    --bg--style1 : linear-gradient(#ee9ca7, #ffdde1);
+    --bg--style2 : linear-gradient(#7F7FD5,#86A8E7,#91EAE4);
+    --bg--style3 : linear-gradient(#FFEEEE,#DDEFBB);
+    --bg--style4 : linear-gradient(#DAD299,#B0DAB9);
+}
+
+body{
+    height: 100vh;
+    background: var(--bg--style1) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toDoMain{
+    align-items: center;
+    text-align: flex-start;
+    width: 300px;
+    background-color: whitesmoke;
+    border-radius: 25px;
+    box-shadow: 1px 1px 3px 3px rgba(0,0,0,0.1) ;
+    transition: all 0.5s ease-in-out;
+    
+}
+.toDoInput{
+    margin: 10px 20px;
+    width: 250px;
+    height: 45px;
+    background: transparent;
+    border: none;
+    font-size: 25px;
+}
+input:focus {
+    outline: none;
+}
+.toDoList{
+    margin: 0px 20px;
+    list-style: none;
+    font-size: 25px;
+    padding-bottom: 20px;
+}
+.toDoList li {
+    padding-top:10px;
+    color: black;
+    position: relative;
+    padding-right: 0px;
+    transition: all 1s ease-in-out;
+}
+.toDoList i {
+    padding-right: 10px;
+    font-size: 17px;
+    color: rgba(0,0,0,0.3);
+}
+.toDoList span {
+    display: inline-block;
+    width: 230px;
+    color: black;
+}
+@keyframes generate{
+    from{
+        transform: scaleX(0);
+    }
+    to{
+        transform: scaleX(1);
+    }
+}
+@keyframes degenerate{
+    from{
+        transform: scaleX(1);
+    }
+    to{
+        transform: scaleX(0);
+    }
+}
+
+.bar{
+    position:absolute;
+    top:58%;
+    left: 10%;
+    height: 2px;
+    border-radius: 3px;
+    background-color:rgba(0,0,0,0.7);
+    animation: generate 0.8s ease-in-out;
+}
+    
+.none{
+   
+    display: none;
+    
+}
